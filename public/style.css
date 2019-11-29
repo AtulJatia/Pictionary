@@ -1,0 +1,120 @@
+body {
+    font-family: 'Open Sans',sans-serif;
+    background-color: #373A59;
+}
+
+.heading {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#canvas {
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+}
+
+#eraser-icon, #pencil-icon {
+    width: 40px;
+    border: 2px solid black;
+    padding: 10px;
+    color: purple;
+}
+
+.active#eraser-icon, .active#pencil-icon {
+    border: 2px solid green;
+}
+
+#drawing-container {
+    width: 20%;
+    float: left;
+    padding: 1rem;
+}
+
+#canvas-container {
+    width: 55%;
+    float: left;
+
+}
+
+#extra-container {
+    width: 20%;
+    float: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.3rem;
+    margin: 1rem 1rem 1rem 0;
+    border: 1px solid #434764;
+    height: 2.2rem;
+    border-radius: 0.5rem;
+}
+
+#clear-btn,#change-name,#submit-button {
+    display: block;
+    background-color: #8388A5;
+    padding : 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #434764;
+    font-size: 1.2rem;
+    width:18rem;
+    color: #434764;
+    margin: 0.3rem auto;    
+}
+
+#clear-btn {
+    margin: 0.3rem;
+}
+
+#players-list,th, td  {
+        border: 2px solid black;
+        padding: 0.6rem;
+}
+
+td {
+    width: 30%;
+}
+
+#players-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.heading-3 {
+    margin-top: 2rem;
+}
+
+#space {
+    height: 1.5rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #drawing-container {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #drawing-container::after {
+        clear: both;
+    }
+    
+    #canvas-container {
+        float: none;
+        display: block;    
+    }
+
+
+
+    #canvas-container::after {
+        clear: both;
+    }
+
+    #extra-container {
+        display: block;
+        float: none;
+        width: 80%;
+    }
+  }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pictionary</title>
+    <link rel="icon" href="./preview.jpg" type="image/jpg" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <a href="http://www.freepik.com">Designed by gstudioimagen / Freepik</a> -->
+</head>
+
+<body>
+
+    <h1 class="heading">Pictionary</h1>
+
+    <div id="main-container">
+
+        <div id="drawing-container">
+            <button id="clear-btn">Clear the Canvas</button>
+            <h3 class="heading-3">Choose colour:</h3>
+            <input type="color" id="color-picker" />
+            <h3 class="heading-3">Choose brush size:</h3>
+            <input type="range" name="brush-size" min="1" max="20" value="5" />
+            <div id="space"></div>
+            <img id="pencil-icon" src="pencil1.png" alt="Pencil">
+            <img id="eraser-icon" src="eraser.png" alt="Eraser">
+        </div>
+
+        <div id="canvas-container">
+            <canvas id="canvas" width="800" height="600"></canvas>
+        </div>
+
+        <div id="extra-container">
+            <h2 id="current-word-draw"></h2>
+            <h2 id="time-left"></h2>
+            <h2>Change your name: </h2>
+            <input type="text" id="name" />
+            <button id="change-name">Change</button>
+            <h2>Guess your answer:</h2>
+            <input type="text" id="answer" />
+            <button id="submit-button">Submit the Answer</button>
+            <h2>Scores Table</h2>
+            <table id="players-list">
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        let socket = io("http://localhost:3000");
+        console.log('Socket connected');
+        console.log(socket.id);
+    </script>
+    <script src="script.js"></script>
+    <script src="socket.js"></script>
+
+</body>
+
+</html>
