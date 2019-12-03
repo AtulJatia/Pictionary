@@ -1,9 +1,6 @@
 let context = document.getElementById("canvas").getContext("2d");
 let colorPicker = $("#color-picker");
 
-const canvasLeftOffset = $("#canvas")[0].offsetLeft;
-const canvasTopOffset = $("#canvas")[0].offsetTop;
-
 let allowedToDraw = false;
 
 
@@ -14,6 +11,35 @@ let colors = [];
 let sizes = [];
 let paint = false;
 let tool = "pencil";
+
+function setWindowSize() {
+    if (window.innerWidth / 2 < 800) {
+        $("#canvas")[0].width = window.innerWidth / 2;
+    }
+    else {
+        $("#canvas")[0].width = 800;
+    }
+
+
+    if (window.innerHeight / 2 < 400) {
+        $("#canvas")[0].height = window.innerHeight / 1.3;
+    }
+    else {
+        $("#canvas")[0].height = 700;
+    }
+}
+
+setWindowSize();
+
+let canvasLeftOffset = $("#canvas")[0].offsetLeft;
+let canvasTopOffset = $("#canvas")[0].offsetTop;
+
+$(window).resize(() => {
+    canvasLeftOffset = $("#canvas")[0].offsetLeft;
+    canvasTopOffset = $("#canvas")[0].offsetTop;
+    setWindowSize();
+    redrawAsReceiver();
+})
 
 
 $("#pencil-icon").addClass("active");

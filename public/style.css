@@ -26,13 +26,13 @@ body {
 }
 
 #drawing-container {
-    width: 25%;
+    width: 22%;
     float: left;
     padding: 1rem;
 }
 
 #canvas-container {
-    width: 50%;
+    width: 53%;
     float: left;
 
 }
@@ -121,4 +121,4 @@ td {
         float: none;
         width: 80%;
     }
-  }
+}
