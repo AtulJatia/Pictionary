@@ -136,14 +136,14 @@ $("#canvas").on('mousedown', function (e) {
     redraw();
 });
 
-$("#canvas").on('touchstart', function (e) {
-    // alert("touch move");
+// $("#canvas").on('touchstart', function (e) {
+//     // alert("touch move");
 
-    paint = true;
+//     paint = true;
 
-    addClick(e.pageX - canvasLeftOffset, e.pageY - canvasTopOffset);
-    redraw();
-});
+//     addClick(e.pageX - canvasLeftOffset, e.pageY - canvasTopOffset);
+//     redraw();
+// });
 
 $("#canvas").on('mousemove', function (e) {
     if (paint) {
@@ -152,13 +152,13 @@ $("#canvas").on('mousemove', function (e) {
     }
 });
 
-$("#canvas").on('touchmove', function (e) {
-    alert("touch move");
-    if (paint) {
-        addClick(e.pageX - canvasLeftOffset, e.pageY - canvasTopOffset, true);
-        redraw();
-    }
-});
+// $("#canvas").on('touchmove', function (e) {
+//     alert("touch move");
+//     if (paint) {
+//         addClick(e.pageX - canvasLeftOffset, e.pageY - canvasTopOffset, true);
+//         redraw();
+//     }
+// });
 
 $("#canvas").on('mouseup', function (e) {
     paint = false;
