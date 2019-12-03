@@ -1,8 +1,8 @@
-socket.emit('message1', [1, 2, 3, 4, 5]);
+// socket.emit('message1', [1, 2, 3, 4, 5]);
 
-socket.on('message2', (data) => {
-    console.log(data);
-});
+// socket.on('message2', (data) => {
+//     console.log(data);
+// });
 
 socket.on('draw', (data) => {
     clickX = data.clickX;
@@ -106,7 +106,7 @@ socket.on("guess_result", (data) => {
     }
     else {
         swal({
-            title: "Already guessed",
+            title: data,
             icon: "info",
             button: "Okay",
         });
@@ -127,4 +127,14 @@ socket.on("gameover_server", () => {
 socket.on("nextround_server", () => {
     $("#current-word-draw").html("");
     $("#time-left").html("Time left : 0 seconds. Game Over!");
+})
+
+// Activity Center
+
+socket.on("activity_server", (data) => {
+    const activityDiv = $("#activity-center");
+    activityDiv.html("");
+    data.forEach(el => {
+        activityDiv.append(`<p>${el}</p>`);
+    });
 })

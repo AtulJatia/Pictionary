@@ -27,6 +27,10 @@
             <div id="space"></div>
             <img id="pencil-icon" src="pencil1.png" alt="Pencil">
             <img id="eraser-icon" src="eraser.png" alt="Eraser">
+            <h3 class="activity-center-heading">Activity Center</h3>
+            <div id="activity-center">
+
+            </div>
         </div>
 
         <div id="canvas-container">
@@ -54,7 +58,8 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         // Socket connection
-        let socket = io("http://139.59.2.150/");
+        let socket = io("http://localhost:3000/");
+        // let socket = io("http://139.59.2.150/");
         console.log('Socket connected');
         console.log(socket.id);
     </script>
