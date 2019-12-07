@@ -1,6 +1,6 @@
 # Online Pictionary Game
 
-Pictionary is a word-guessing game where a person draws and the other people have to guess what was being drawn within a certain time limit.
+Pictionary is a word-guessing game where a person draws and the other people have to guess what is being drawn within a certain time limit.
 
 The game circulates from one user to another if everyone guessed the answer or the time expired.
 
