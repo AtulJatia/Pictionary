@@ -7,6 +7,7 @@ The game circulates from one user to another if everyone guessed the answer or t
 # Game was made using 
 
 Client:- HTML, CSS, JS
+<br>
 Server: Express.js
 Used socket.io for all real-time communication.
 
