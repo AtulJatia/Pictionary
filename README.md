@@ -4,15 +4,17 @@ Pictionary is a word-guessing game where a person draws and the other people hav
 
 The game circulates from one user to another if everyone guessed the answer or the time expired.
 
-# Game was made using 
+## Tech Stack used
 
-Client:- HTML, CSS, JS
+**Client**:- HTML, CSS, JS
 <br>
-Server: Express.js
 <br>
-Used socket.io for all real-time communication.
+**Server**: Express.js (Node.js)
+<br>
+<br>
+Used **Socket.io** for all real-time communication.
 
-# How to run:
+## How to run:
 
 1. Clone the repository into your desired location.
 
