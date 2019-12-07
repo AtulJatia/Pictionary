@@ -22,7 +22,7 @@ Used **Socket.io** for all real-time communication.
 
 3. npm install
 
-4. npm run dev
+4. npm run start
 
 5. Start by visiting http://localhost:3000 
 
